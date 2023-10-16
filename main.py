@@ -61,23 +61,35 @@ while loop:
       if Accounts[i] <= 2000:
         print(f"Account {i}: ${Accounts[i]}")
         totalcount = count + 1
+        
 
-    print(f"Account with less than $2000: {totalcount}")
+    print(f"Accounts with less than $2000: {totalcount}")
 
 
-"""
+
   #Option 5
   elif option == "5":   
     #GENEROUS DONOR
-
+    print("GENEROUS DONOR")
+    for i in range(len(Accounts)):
+      if Accounts[i] <= 2000:
+        print(f"Account {i} Previous Balance: ${Accounts[i]}")
+        total = Accounts[i] + 500
+        print(f"Account {i} NewBalance: ${total}")
+       
 
 # Option 6
   elif option == "6":
     #HACKER ATTACK
+    print("HACKER ATTACK")
+    for i in range(len(Accounts)):
+      hack = Accounts[i]*0.05
+      print(hack)
+
 
     
   # Option 7
   elif option == "7":
     print("EXIT")
     loop = False
-"""
+
