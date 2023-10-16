@@ -20,29 +20,52 @@ while loop:
 
   # Take Action Based on Menu Selection
   # Option 1
+
   if option == "1":
     # PRINT ACCOUNTS
+    print("PRINT ACCOUNTS")
+    for i in range(len(Accounts)):
+      print(f"Accounts {i}: ${Accounts[i]}")
 
-    for num in Accounts:
-      print("Account " + ": "+ "$" + str(num))
-
-'''
   # Option 2
   elif option == "2":
     # DEPOSIT
-
+   print("DEPOSIT")
+   accountnum = int(input("Enter Account#: "))
+   deposit = int(input("Enter amount to deposit: "))
+   sum = Accounts[accountnum] + deposit
+   print(f"Account {accountnum} Previous Balance: ${Accounts[accountnum]}")
+   print(f"Account {accountnum} New Balance: ${sum}")
  
 
   # Option 3
   elif option == "3":
     # WITHDRAWAL
+    print("WITHDRAWAL")
+    accountnum = int(input("Enter Account#: "))
+    withdraw = int(input("Enter amount to withdraw: "))
+    sum = Accounts[accountnum] - withdraw
+    if sum < 0:
+      print("Sorry, insufficient funds")
+    else:
+      print(f"Account {accountnum} Previous Balance: ${Accounts[accountnum]}")
+      print(f"Account {accountnum} New Balance: ${sum}")
       
 
   # Option 4
-  elif option == "4"
+  elif option == "4":
     #COUNT UNDER $2000
+    print("COUNT UNDER $2000")
+    count = 0
+    for i in range(len(Accounts)):
+      if Accounts[i] <= 2000:
+        print(f"Account {i}: ${Accounts[i]}")
+        totalcount = count + 1
+
+    print(f"Account with less than $2000: {totalcount}")
 
 
+"""
   #Option 5
   elif option == "5":   
     #GENEROUS DONOR
@@ -57,4 +80,4 @@ while loop:
   elif option == "7":
     print("EXIT")
     loop = False
-    '''
+"""
