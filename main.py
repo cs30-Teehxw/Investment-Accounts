@@ -84,7 +84,9 @@ while loop:
     print("HACKER ATTACK")
     for i in range(len(Accounts)):
       hack = Accounts[i]*0.05
-      print(hack)
+      print(f"Account {i} New Balance: {hack}")
+    
+   
 
 
     
